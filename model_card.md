@@ -4,33 +4,27 @@
 
 Give your model a short, descriptive name.  
 Example: **VibeFinder 1.0**  
-
+VibeMAtch 1.0
 ---
 
 ## 2. Intended Use  
 
 Describe what your recommender is designed to do and who it is for. 
+This system recommends songs based on a user’s preferences for genre, mood, energy, and tempo. It tries to suggest songs that match the user’s overall vibe.
 
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+  
 
 ---
 
 ## 3. How the Model Works  
 
-Explain your scoring approach in simple language.  
+The model recommends songs by comparing each song’s features to a user’s preferences. It looks at attributes like genre, mood, energy, and tempo to understand the “vibe” of each song.
 
-Prompts:  
+The user profile includes their preferred genre and mood, along with target values for energy and tempo. For each song, the system checks if the genre and mood match the user’s preferences and gives points when they do. It also measures how close the song’s energy and tempo are to the user’s target values. Songs that are closer in these numerical features receive higher scores.
 
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
+All of these factors are combined into a single score for each song. The system then ranks all songs from highest to lowest score and recommends the top results.
 
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
+
 
 ---
 
@@ -44,7 +38,11 @@ Prompts:
 - What genres or moods are represented  
 - Did you add or remove data  
 - Are there parts of musical taste missing in the dataset  
+The dataset contains about 20 songs with features such as genre, mood, energy, and tempo_bpm. The songs include a mix of genres like pop, rock, lofi, Afrobeats, and EDM, along with moods such as happy, chill, angry, and calm.
 
+I added additional songs to expand the dataset and make it more diverse. However, the dataset is still small and does not cover all music styles or cultural influences.
+
+Some aspects of musical taste are missing, such as lyrics, artist popularity, and personal listening history. This limits how accurately the system can represent real user preferences.
 ---
 
 ## 5. Strengths  
@@ -55,7 +53,12 @@ Prompts:
 
 - User types for which it gives reasonable results  
 - Any patterns you think your scoring captures correctly  
-- Cases where the recommendations matched your intuition  
+- Cases where the recommendations matched your intuition 
+The system works well for users with clear and consistent preferences, such as high-energy listeners or users who prefer chill music. It is especially effective when the user’s genre and mood align closely with songs in the dataset.
+
+The scoring system captures energy and tempo similarity well, which helps match the overall “vibe” of songs. In many cases, the recommendations matched my intuition, especially for profiles like “Chill Lofi” and “High Energy Pop.”
+
+The system is also easy to understand because the scoring rules are simple and transparent. 
 
 ---
 
