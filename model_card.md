@@ -69,6 +69,9 @@ Prompts:
 - Genres or moods that are underrepresented  
 - Cases where the system overfits to one preference  
 - Ways the scoring might unintentionally favor some users  
+The system relies heavily on a small set of features, especially energy and genre, which can lead to repetitive recommendations. Songs with similar energy levels are often ranked highly even if they differ in mood or genre.
+
+The dataset is small and may not represent diverse musical tastes, which limits recommendation quality. Additionally, the system does not adapt over time or learn from user feedback, making it less personalized compared to real-world systems.
 
 ---
 
@@ -82,6 +85,11 @@ Prompts:
 - What you looked for in the recommendations  
 - What surprised you  
 - Any simple tests or comparisons you ran  
+I tested the recommender using multiple user profiles: High Energy Pop, Chill Lofi, Intense Rock, and an Edge Case with conflicting preferences. 
+
+The system generally behaved as expected. High energy profiles produced faster and more intense songs, while chill profiles resulted in slower, calmer recommendations. 
+
+However, some songs appeared across multiple profiles, suggesting that energy similarity has a strong influence on ranking. The edge case profile showed that when preferences conflict, the system tends to prioritize numerical features like energy over categorical ones like mood.
 
 No need for numeric metrics unless you created some.
 
@@ -109,3 +117,9 @@ Prompts:
 - What you learned about recommender systems  
 - Something unexpected or interesting you discovered  
 - How this changed the way you think about music recommendation apps  
+
+Building this recommender showed how simple rules and weights can turn user preferences into ranked recommendations. I learned that even basic features like genre, mood, and energy can produce reasonable results when combined with a scoring system.
+
+One key insight was how strongly certain features, especially energy, influence the output. In some cases, songs with similar energy appeared across different user profiles, even when the mood or genre did not fully match. This showed how easily a model can become biased toward specific features.
+
+This project also made it clear that real recommendation systems are much more complex. Human judgment still matters because users may value context, lyrics, or personal meaning in music—things this model cannot capture.
