@@ -71,6 +71,7 @@ This system may over-prioritize genre, which could cause it to ignore songs from
 
 ![alt text](image.png)
 ---
+![alt text](image-1.png)
 
 ## Getting Started
 
