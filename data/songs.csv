@@ -9,3 +9,13 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+Afrobeats,Happy,0.85,105
+Lofi,Chill,0.30,70
+Jazz,Calm,0.40,85
+EDM,Energetic,0.95,128
+Classical,Peaceful,0.20,60
+Hip-Hop,Confident,0.75,95
+Rock,Angry,0.88,140
+R&B,Smooth,0.60,80
+Country,Nostalgic,0.50,90
+Pop,Upbeat,0.78,115
